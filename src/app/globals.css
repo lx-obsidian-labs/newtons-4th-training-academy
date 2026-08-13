@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#111111] text-white font-body antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display tracking-wide;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-gold to-yellow-500 text-industrial-black font-semibold px-8 py-4 
+           hover:shadow-lg hover:shadow-gold/30 active:scale-[0.98] transition-all duration-300 
+           rounded-xl;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-gold text-gold px-8 py-4 font-semibold
+           hover:bg-gold hover:text-industrial-black 
+           transition-all duration-300 active:scale-[0.98] rounded-xl;
+  }
+
+  .btn-ghost {
+    @apply text-white/80 hover:text-gold transition-colors duration-300;
+  }
+
+  .card-industrial {
+    @apply bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 
+           hover:border-gold/30 rounded-3xl transition-all duration-500;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  .gradient-overlay {
+    @apply bg-gradient-to-t from-[#111111] via-transparent to-transparent;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-gold to-yellow-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-yellow-400 to-gold;
+  }
+
+  .backdrop-blur-industrial {
+    @apply backdrop-blur-xl bg-[#111111]/80;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
