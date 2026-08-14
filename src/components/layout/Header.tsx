@@ -34,6 +34,7 @@ const navLinks = [
   { title: 'Facility', href: '#facility' },
   { title: 'Testimonials', href: '#testimonials' },
   { title: 'Contact', href: '#contact' },
+  { title: 'Portal', href: '/portal' },
 ]
 
 export function Header() {

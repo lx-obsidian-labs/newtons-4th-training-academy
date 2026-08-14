@@ -35,6 +35,7 @@ const legalLinks = [
   { title: 'Privacy Policy', href: '/privacy' },
   { title: 'Terms of Service', href: '/terms' },
   { title: 'Cookie Policy', href: '/cookies' },
+  { title: 'Student Portal', href: '/portal' },
 ]
 
 export function Footer() {
