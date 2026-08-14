@@ -2,27 +2,27 @@
 
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Play, Building, Users, Award, Download, ExternalLink } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Play, Building, Users, Award, ExternalLink } from 'lucide-react'
 
 const facilities = [
-  { image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop', title: 'Heavy Equipment Yard', description: '10,000 sqm of practical training area with real mining machinery' },
+  { image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop', title: 'Heavy Equipment Yard', description: 'Dedicated practical training yard with real mining machinery' },
   { image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop', title: 'Modern Classrooms', description: 'Air-conditioned learning spaces with latest technology' },
   { image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop', title: 'Service Workshop', description: 'Full maintenance and repair facilities for training' },
-  { image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop', title: 'Training Simulators', description: 'Advanced operator training simulators for practice' },
+  { image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop', title: 'Training Simulators', description: '777 rigid dump truck simulator training for practice' },
 ]
 
 const certifications = [
-  'SAQA Accredited Training Provider',
-  'MQA Approved Training Centre',
-  'ISO 9001:2015 Certified',
-  'NOSA Member',
-  'Mining Industry Training Provider',
+  'MQA Accredited Training Provider',
+  'Accredited Operator Training Courses',
+  'Mining & Construction Short Courses',
+  'Practical Hands-On Training',
+  'Witbank & Middelburg Locations',
 ]
 
 const stats = [
-  { value: '10K+', label: 'sqm Training Area', icon: Building },
-  { value: '50+', label: 'Heavy Machines', icon: Users },
-  { value: '15+', label: 'Years Experience', icon: Award },
+  { value: '2', label: 'Training Locations', icon: Building },
+  { value: '777', label: 'Simulator Training', icon: Users },
+  { value: '3-Month', label: 'Extended Training Options', icon: Award },
 ]
 
 export function Facility() {
@@ -152,7 +152,7 @@ export function Contact() {
             <div className="relative rounded-3xl overflow-hidden mb-10 h-64">
               <img 
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=400&fit=crop" 
-                alt="MMS Training Center"
+                alt="Newton's 4th Training Center"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#111]/80 to-transparent" />
@@ -162,7 +162,7 @@ export function Contact() {
                     <MapPin className="text-gold" size={20} />
                   </div>
                   <div>
-                    <p className="text-white font-semibold">MMS Training Center</p>
+                    <p className="text-white font-semibold">Newton&apos;s 4th Training Center</p>
                     <p className="text-white/60 text-sm">Middelburg, Mpumalanga</p>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-display text-lg text-white mb-2">Phone</h4>
-                  <a href="tel:+27130000000" className="text-white/50 hover:text-gold transition-colors font-light">+27 13 000 0000</a>
+                  <a href="tel:+27718010408" className="text-white/50 hover:text-gold transition-colors font-light">071 801 0408</a>
                 </div>
               </div>
 
@@ -186,7 +186,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-display text-lg text-white mb-2">Email</h4>
-                  <a href="mailto:info@mmsolutions.co.za" className="text-white/50 hover:text-gold transition-colors font-light">info@mmsolutions.co.za</a>
+                  <a href="mailto:info@newtons4th.co.za" className="text-white/50 hover:text-gold transition-colors font-light">info@newtons4th.co.za</a>
                 </div>
               </div>
 

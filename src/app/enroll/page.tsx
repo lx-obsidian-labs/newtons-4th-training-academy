@@ -5,17 +5,25 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { Container } from '@/components/ui/Container'
-import { Badge } from '@/components/ui/Badge'
-import { CheckCircle, ArrowRight, Upload, User, Phone, Mail, Calendar, BookOpen, Award, Shield, Loader2, FileText, Clock, Users, AlertCircle, MapPin, Send, ChevronRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Award, Shield, Users, Loader2, AlertCircle, Send, ChevronRight, Sparkles, Phone, Mail, CheckCircle, Clock, BookOpen } from 'lucide-react'
 import Link from 'next/link'
 
 const courses = [
   { value: 'excavator', label: 'Excavator Operator Training', price: 'R12,500' },
+  { value: 'tlb', label: 'TLB (Tractor Loader Backhoe) Training', price: 'R11,000' },
   { value: 'dump-truck', label: 'Dump Truck Operator Training', price: 'R9,800' },
   { value: 'bulldozer', label: 'Bulldozer Training', price: 'R11,200' },
   { value: 'loader', label: 'Front-End Loader Training', price: 'R10,500' },
   { value: 'drill-rig', label: 'Drill Rig Operator Training', price: 'R14,500' },
+  { value: 'adt', label: 'ADT (Articulated Dump Truck) Training', price: 'R12,800' },
+  { value: 'rigid-dump-truck', label: 'Rigid Dump Truck (777) Training', price: 'R13,500' },
+  { value: 'grader', label: 'Grader Operator Training', price: 'R11,800' },
+  { value: 'bobcat', label: 'Bobcat (Skid Steer) Training', price: 'R9,500' },
+  { value: 'lhd-scoop', label: 'LHD Scoop Training', price: 'R14,800' },
   { value: 'forklift', label: 'Forklift Training', price: 'R7,500' },
+  { value: 'mobile-crane', label: 'Mobile Crane Training', price: 'R15,500' },
+  { value: 'tower-crane', label: 'Tower Crane Training', price: 'R16,500' },
+  { value: 'overhead-crane', label: 'Overhead Crane Training', price: 'R14,000' },
   { value: 'safety', label: 'Safety Officer Course', price: 'R8,500' },
 ]
 
@@ -41,13 +49,22 @@ const provinceOptions = [
 ]
 
 const courseDetails: Record<string, { duration: string; certification: string; modules: string[]; icon: string }> = {
-  excavator: { duration: '4-6 weeks', certification: 'SAQA Accredited', modules: ['Safety Fundamentals', 'Machine Operations', 'Digging Techniques', 'Material Handling'], icon: '🚜' },
-  'dump-truck': { duration: '3-4 weeks', certification: 'SAQA Accredited', modules: ['Site Safety', 'Vehicle Operations', 'Haul Road Navigation', 'Load Management'], icon: '🚛' },
-  bulldozer: { duration: '4-5 weeks', certification: 'SAQA Accredited', modules: ['Earthmoving Basics', 'Blade Control', 'Grading Techniques', 'Site Preparation'], icon: '🏗️' },
-  loader: { duration: '3-4 weeks', certification: 'SAQA Accredited', modules: ['Loader Fundamentals', 'Loading Operations', 'Stockpile Management', 'Cycle Optimization'], icon: '⚙️' },
-  'drill-rig': { duration: '5-6 weeks', certification: 'SAQA Accredited', modules: ['Drilling Principles', 'Rig Operations', 'Sample Collection', 'Maintenance'], icon: '🔧' },
-  forklift: { duration: '2-3 weeks', certification: 'NOSA Certified', modules: ['Safety Protocols', 'Lift Operations', 'Warehouse Procedures', 'Equipment Checks'], icon: '🏪' },
-  safety: { duration: '2-3 weeks', certification: 'NOSA Certified', modules: ['Risk Assessment', 'Safety Auditing', 'Emergency Response', 'Compliance'], icon: '🛡️' },
+  excavator: { duration: '4-6 weeks', certification: 'MQA Accredited', modules: ['Safety Fundamentals', 'Machine Operations', 'Digging Techniques', 'Material Handling'], icon: '🚜' },
+  tlb: { duration: '2-3 weeks', certification: 'MQA Accredited', modules: ['Machine Safety', 'Loader Operations', 'Backhoe Operations', 'Site Work'], icon: '🚜' },
+  'dump-truck': { duration: '3-4 weeks', certification: 'MQA Accredited', modules: ['Site Safety', 'Vehicle Operations', 'Haul Road Navigation', 'Load Management'], icon: '🚛' },
+  bulldozer: { duration: '4-5 weeks', certification: 'MQA Accredited', modules: ['Earthmoving Basics', 'Blade Control', 'Grading Techniques', 'Site Preparation'], icon: '🏗️' },
+  loader: { duration: '3-4 weeks', certification: 'MQA Accredited', modules: ['Loader Fundamentals', 'Loading Operations', 'Stockpile Management', 'Cycle Optimization'], icon: '⚙️' },
+  'drill-rig': { duration: '5-6 weeks', certification: 'MQA Accredited', modules: ['Drilling Principles', 'Rig Operations', 'Sample Collection', 'Maintenance'], icon: '🔧' },
+  adt: { duration: '3-4 weeks', certification: 'MQA Accredited', modules: ['Site Safety', 'Vehicle Operations', 'Haul Road Navigation', 'Load Management'], icon: '🚛' },
+  'rigid-dump-truck': { duration: '3-4 weeks', certification: 'MQA Accredited', modules: ['Mine Safety', '777 Operations', 'Haul Road Navigation', 'Load Management'], icon: '🚛' },
+  grader: { duration: '3-4 weeks', certification: 'MQA Accredited', modules: ['Blade Control', 'Grading Techniques', 'Slope Work', 'Site Preparation'], icon: '🏗️' },
+  bobcat: { duration: '2-3 weeks', certification: 'MQA Accredited', modules: ['Machine Safety', 'Loader Operations', 'Attachment Use', 'Site Work'], icon: '🏗️' },
+  'lhd-scoop': { duration: '4-5 weeks', certification: 'MQA Accredited', modules: ['Underground Safety', 'Scoop Operations', 'Mucking Techniques', 'Mine Communication'], icon: '⛏️' },
+  forklift: { duration: '2-3 weeks', certification: 'MQA Accredited', modules: ['Safety Protocols', 'Lift Operations', 'Warehouse Procedures', 'Equipment Checks'], icon: '🏪' },
+  'mobile-crane': { duration: '4-6 weeks', certification: 'MQA Accredited', modules: ['Crane Safety', 'Rigging Fundamentals', 'Lift Planning', 'Load Charts'], icon: '🏗️' },
+  'tower-crane': { duration: '4-6 weeks', certification: 'MQA Accredited', modules: ['Crane Safety', 'Tower Operations', 'Lift Planning', 'Site Coordination'], icon: '🏗️' },
+  'overhead-crane': { duration: '3-4 weeks', certification: 'MQA Accredited', modules: ['Crane Safety', 'Overhead Operations', 'Load Handling', 'Maintenance Checks'], icon: '🏭' },
+  safety: { duration: '2-3 weeks', certification: 'MQA Accredited', modules: ['Risk Assessment', 'Safety Auditing', 'Emergency Response', 'Compliance'], icon: '🛡️' },
 }
 
 export default function EnrollmentPage() {
@@ -163,9 +180,9 @@ export default function EnrollmentPage() {
 
             <div className="flex items-center justify-center gap-8 mt-12">
               {[
-                { icon: Shield, text: 'SAQA Accredited' },
+                { icon: Shield, text: 'MQA Accredited' },
                 { icon: Award, text: 'Industry Certified' },
-                { icon: Users, text: '98% Placement' },
+                { icon: Users, text: 'Job Placement Assistance' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-white/40">
                   <item.icon size={18} className="text-gold" />
@@ -457,7 +474,7 @@ export default function EnrollmentPage() {
                           <div>
                             <label className="block text-sm font-medium text-white/60 mb-3 uppercase tracking-wider">Your Motivation (Optional)</label>
                             <textarea name="motivation" value={formData.motivation} onChange={handleChange} rows={3}
-                              placeholder="Tell us why you want to join MMS and your career goals..."
+                              placeholder="Tell us why you want to join Newton's 4th and your career goals..."
                               className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-gold/50 transition-colors text-lg resize-none" />
                           </div>
                         </motion.div>
@@ -502,7 +519,7 @@ export default function EnrollmentPage() {
                           </div>
 
                           <div>
-                            <label className="block text-sm font-medium text-white/60 mb-3 uppercase tracking-wider">How did you hear about MMS?</label>
+                            <label className="block text-sm font-medium text-white/60 mb-3 uppercase tracking-wider">How did you hear about Newton&apos;s 4th?</label>
                             <select name="howDidYouHear" value={formData.howDidYouHear} onChange={handleChange}
                               className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-gold/50 transition-colors text-lg">
                               <option value="">Select option</option>
@@ -519,7 +536,7 @@ export default function EnrollmentPage() {
                             <div>
                               <span className="text-white font-semibold text-lg">I agree to the Terms and Conditions *</span>
                               <p className="text-white/40 text-sm mt-2 leading-relaxed">
-                                By submitting, I confirm all information is accurate and consent to MMS contacting me about my enrollment and training programs.
+                                By submitting, I confirm all information is accurate and consent to Newton&apos;s 4th Training Academy contacting me about my enrollment and training programs.
                               </p>
                             </div>
                           </label>
@@ -570,15 +587,15 @@ export default function EnrollmentPage() {
                       <Award size={28} className="text-gold" />
                     </div>
                     <div>
-                      <h3 className="font-display text-xl text-white">Why MMS?</h3>
+                      <h3 className="font-display text-xl text-white">Why Newton&apos;s 4th?</h3>
                     </div>
                   </div>
                   
                   <div className="space-y-4">
-                    {[
-                      { icon: Shield, text: 'SAQA Accredited Training' },
+                    {                    [
+                      { icon: Shield, text: 'MQA Accredited Training' },
                       { icon: Award, text: 'Industry-Recognized' },
-                      { icon: Users, text: '98% Job Placement' },
+                      { icon: Users, text: 'Job Placement Assistance' },
                       { icon: Clock, text: 'Flexible Schedules' },
                       { icon: BookOpen, text: 'Modern Equipment' },
                     ].map((item, i) => (
@@ -630,10 +647,10 @@ export default function EnrollmentPage() {
                   <span className="font-semibold text-white">Need Help?</span>
                 </div>
                 <p className="text-white/50 text-sm mb-4">Call us for immediate assistance</p>
-                <a href="tel:+27130000000" className="text-gold font-display text-2xl hover:text-yellow-400 transition-colors">+27 13 000 0000</a>
+                <a href="tel:+27718010408" className="text-gold font-display text-2xl hover:text-yellow-400 transition-colors">071 801 0408</a>
                 <div className="flex items-center gap-3 mt-4">
                   <Mail size={16} className="text-white/40" />
-                  <a href="mailto:enroll@mmsolutions.co.za" className="text-white/50 text-sm hover:text-gold transition-colors">enroll@mmsolutions.co.za</a>
+                  <a href="mailto:info@newtons4th.co.za" className="text-white/50 text-sm hover:text-gold transition-colors">info@newtons4th.co.za</a>
                 </div>
               </div>
             </div>

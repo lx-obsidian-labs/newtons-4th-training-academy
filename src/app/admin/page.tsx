@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/Badge'
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card'
 import { 
   Users, DollarSign, TrendingUp, BookOpen, Award, Clock, 
-  BarChart3, Settings, FileText, Bell, Search, ChevronDown,
+  BarChart3, Settings, FileText, Bell, Search,
   ArrowUpRight, ArrowDownRight, PieChart, Activity
 } from 'lucide-react'
 
@@ -28,10 +28,20 @@ const recentEnrollments = [
 
 const courseStats = [
   { name: 'Excavator', enrollments: 450, revenue: 'R5,625,000' },
+  { name: 'TLB', enrollments: 310, revenue: 'R3,410,000' },
   { name: 'Dump Truck', enrollments: 520, revenue: 'R5,096,000' },
   { name: 'Bulldozer', enrollments: 380, revenue: 'R4,256,000' },
   { name: 'Front-End Loader', enrollments: 290, revenue: 'R3,045,000' },
   { name: 'Drill Rig', enrollments: 180, revenue: 'R2,610,000' },
+  { name: 'ADT', enrollments: 240, revenue: 'R3,072,000' },
+  { name: 'Rigid Dump Truck (777)', enrollments: 210, revenue: 'R2,835,000' },
+  { name: 'Grader', enrollments: 190, revenue: 'R2,242,000' },
+  { name: 'Bobcat', enrollments: 260, revenue: 'R2,470,000' },
+  { name: 'LHD Scoop', enrollments: 150, revenue: 'R2,220,000' },
+  { name: 'Forklift', enrollments: 400, revenue: 'R3,000,000' },
+  { name: 'Mobile Crane', enrollments: 120, revenue: 'R1,860,000' },
+  { name: 'Tower Crane', enrollments: 100, revenue: 'R1,650,000' },
+  { name: 'Overhead Crane', enrollments: 160, revenue: 'R2,240,000' },
   { name: 'Safety Officer', enrollments: 350, revenue: 'R2,975,000' },
 ]
 
@@ -45,10 +55,10 @@ export default function AdminDashboard() {
           <div className="p-6 border-b border-white/5">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gold rounded flex items-center justify-center">
-                <span className="font-display text-xl text-industrial-black">M</span>
+                <span className="font-display text-base text-industrial-black">N4</span>
               </div>
               <div>
-                <span className="font-display text-sm text-white block">MMS</span>
+                <span className="font-display text-sm text-white block">N4</span>
                 <span className="text-xs text-white/40">Admin Portal</span>
               </div>
             </div>

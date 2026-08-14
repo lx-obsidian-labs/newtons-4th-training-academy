@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
-import { Target, Users, Building, Award, ArrowRight, Phone, Mail, Play, Star, Shield, Award as AwardIcon, Users as UsersIcon, Clock, MapPin, CheckCircle } from 'lucide-react'
+import { Target, Users, Building, Award, ArrowRight, Phone, Shield, Award as AwardIcon, Users as UsersIcon, Clock } from 'lucide-react'
 import Link from 'next/link'
 
 const HeroSection = dynamic(() => import('@/components/sections/Hero').then(m => m.Hero), { ssr: false })
@@ -172,8 +172,8 @@ export default function HomePage() {
             <div className="w-32 h-1 bg-gradient-to-r from-gold via-yellow-400 to-gold mx-auto mb-10" />
             
             <p className="text-xl text-white/50 mb-12 leading-relaxed font-light max-w-2xl mx-auto">
-              Join thousands of successful graduates who have launched their careers 
-              in the mining industry with Mining Machinery Solutions.
+              Join our graduates who have launched their careers in the mining and 
+              construction industries with Newton&apos;s 4th Training Academy.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -188,10 +188,10 @@ export default function HomePage() {
             </div>
 
             <div className="mt-16 flex items-center justify-center gap-8 text-white/30 text-sm flex-wrap">
-              <span className="flex items-center gap-2"><Shield size={16} className="text-gold" /> SAQA Accredited</span>
-              <span className="flex items-center gap-2"><AwardIcon size={16} className="text-gold" /> MQA Approved</span>
-              <span className="flex items-center gap-2"><Clock size={16} className="text-gold" /> 24/7 Support</span>
-              <span className="flex items-center gap-2"><UsersIcon size={16} className="text-gold" /> 98% Success Rate</span>
+              <span className="flex items-center gap-2"><Shield size={16} className="text-gold" /> MQA Accredited</span>
+              <span className="flex items-center gap-2"><AwardIcon size={16} className="text-gold" /> Mining & Construction Courses</span>
+              <span className="flex items-center gap-2"><Clock size={16} className="text-gold" /> Middelburg & Witbank</span>
+              <span className="flex items-center gap-2"><UsersIcon size={16} className="text-gold" /> Practical Job-Ready Training</span>
             </div>
           </motion.div>
         </Container>

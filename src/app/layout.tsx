@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import React from 'react'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Mining Machinery Solutions | Premier Mining Training Institution',
-  description: 'South Africa\'s leading mining and heavy machinery training institution. Expert courses in excavator, dump truck, bulldozer, and heavy equipment operation.',
-  keywords: 'mining training, heavy machinery courses, excavator training, dump truck license, mining certification South Africa',
+  title: "Newton's 4th Training Academy | Mining & Construction Training Institution",
+  description: "Practical, industry-focused mining and construction training in Middelburg, Mpumalanga. Expert courses in excavator, TLB, dump truck, drill rig, and heavy equipment operation.",
+  keywords: 'mining training, construction courses, excavator training, TLB training, dump truck training, heavy machinery courses, Middelburg training academy',
 }
 
 export default function RootLayout({

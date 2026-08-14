@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
-import { Star, Quote, ChevronLeft, ChevronRight, Award, Play } from 'lucide-react'
+import { Star, Quote, Award, Play } from 'lucide-react'
 
 const testimonials = [
-  { name: 'Thabo Mkhize', role: 'Excavator Operator', company: 'Anglo American', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face', rating: 5, quote: 'MMS transformed my life. From being unemployed to operating heavy machinery at one of South Africa\'s largest mining companies. The hands-on training was exceptional.', course: 'Excavator Operator Course', yearsEmployed: 'Employed for 2 years' },
+  { name: 'Thabo Mkhize', role: 'Excavator Operator', company: 'Anglo American', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face', rating: 5, quote: 'Newton\'s 4th transformed my life. From being unemployed to operating heavy machinery at one of South Africa\'s largest mining companies. The hands-on training was exceptional.', course: 'Excavator Operator Course', yearsEmployed: 'Employed for 2 years' },
   { name: 'Nokuthula Dlamini', role: 'Safety Officer', company: 'BHP Billiton', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face', rating: 5, quote: 'The safety officer course opened doors I never knew existed. The instructors are industry veterans who genuinely care about your success.', course: 'Safety Officer Certification', yearsEmployed: 'Employed for 3 years' },
   { name: 'Sipho Ngcobo', role: 'Dump Truck Operator', company: 'Sibanye-Stillwater', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face', rating: 5, quote: 'I was skeptical at first, but the practical training exceeded my expectations. Within weeks of completing my course, I had job offers from major mining companies.', course: 'Dump Truck Operator Training', yearsEmployed: 'Employed for 1.5 years' },
-  { name: 'Lindile Zwane', role: 'Front-End Loader Operator', company: 'Implats', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face', rating: 5, quote: 'The equipment is modern and the training is comprehensive. MMS doesn\'t just teach you to operate machinery - they teach you to be a professional.', course: 'Front-End Loader Training', yearsEmployed: 'Employed for 1 year' },
+  { name: 'Lindile Zwane', role: 'Front-End Loader Operator', company: 'Implats', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face', rating: 5, quote: 'The equipment is modern and the training is comprehensive. Newton\'s 4th doesn\'t just teach you to operate machinery - they teach you to be a professional.', course: 'Front-End Loader Training', yearsEmployed: 'Employed for 1 year' },
 ]
 
 export function Testimonials() {
@@ -74,7 +74,7 @@ export function Testimonials() {
                 </div>
 
                 <p className="text-lg text-white/70 leading-relaxed font-light mb-8">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
 
                 <div className="flex items-center justify-between pt-6 border-t border-white/10">
@@ -104,7 +104,7 @@ export function Testimonials() {
               </div>
               <div>
                 <h3 className="font-display text-2xl text-white mb-2">Watch Student Testimonials</h3>
-                <p className="text-white/50">See how MMS changed the lives of our graduates</p>
+                <p className="text-white/50">See how Newton&apos;s 4th changed the lives of our graduates</p>
               </div>
             </div>
             <button className="px-8 py-4 bg-gradient-to-r from-gold to-yellow-500 text-black font-bold rounded-xl hover:shadow-lg hover:shadow-gold/20 transition-all">

@@ -13,11 +13,20 @@ const navLinks = [
     href: '#courses',
     children: [
       { title: 'Excavator Training', href: '/courses/excavator' },
+      { title: 'TLB Training', href: '/courses/tlb' },
       { title: 'Dump Truck Training', href: '/courses/dump-truck' },
       { title: 'Bulldozer Training', href: '/courses/bulldozer' },
       { title: 'Front-End Loader', href: '/courses/loader' },
       { title: 'Drill Rig Training', href: '/courses/drill-rig' },
+      { title: 'ADT Training', href: '/courses/adt' },
+      { title: 'Rigid Dump Truck (777)', href: '/courses/rigid-dump-truck' },
+      { title: 'Grader Training', href: '/courses/grader' },
+      { title: 'Bobcat Training', href: '/courses/bobcat' },
+      { title: 'LHD Scoop Training', href: '/courses/lhd-scoop' },
       { title: 'Forklift Training', href: '/courses/forklift' },
+      { title: 'Mobile Crane Training', href: '/courses/mobile-crane' },
+      { title: 'Tower Crane Training', href: '/courses/tower-crane' },
+      { title: 'Overhead Crane Training', href: '/courses/overhead-crane' },
       { title: 'Safety Officer Courses', href: '/courses/safety' },
     ]
   },
@@ -47,13 +56,13 @@ export function Header() {
         <Container>
           <div className="flex justify-between items-center py-2.5 text-sm">
             <div className="flex items-center gap-8">
-              <a href="tel:+27130000000" className="flex items-center gap-2 text-white/50 hover:text-gold transition-colors">
+              <a href="tel:+27718010408" className="flex items-center gap-2 text-white/50 hover:text-gold transition-colors">
                 <Phone size={14} />
-                <span>+27 13 000 0000</span>
+                <span>071 801 0408</span>
               </a>
-              <a href="mailto:info@mmsolutions.co.za" className="flex items-center gap-2 text-white/50 hover:text-gold transition-colors">
+              <a href="mailto:info@newtons4th.co.za" className="flex items-center gap-2 text-white/50 hover:text-gold transition-colors">
                 <Mail size={14} />
-                <span>info@mmsolutions.co.za</span>
+                <span>info@newtons4th.co.za</span>
               </a>
             </div>
             <div className="flex items-center gap-6">
@@ -69,11 +78,11 @@ export function Header() {
         <nav className="flex items-center justify-between py-5">
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-14 h-14 bg-gradient-to-br from-gold to-yellow-500 rounded-xl flex items-center justify-center shadow-lg shadow-gold/20 group-hover:shadow-gold/40 transition-shadow">
-              <span className="font-display text-3xl text-black font-bold">M</span>
+              <span className="font-display text-2xl text-black font-bold">N4</span>
             </div>
             <div className="hidden lg:block">
-              <span className="font-display text-sm tracking-[0.25em] text-white">MINING MACHINERY</span>
-              <span className="font-display text-sm tracking-[0.25em] text-gold block">SOLUTIONS</span>
+              <span className="font-display text-sm tracking-[0.25em] text-white">NEWTON&apos;S 4TH</span>
+              <span className="font-display text-sm tracking-[0.25em] text-gold block">TRAINING ACADEMY</span>
             </div>
           </Link>
 

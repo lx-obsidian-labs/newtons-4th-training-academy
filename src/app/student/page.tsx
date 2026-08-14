@@ -8,7 +8,7 @@ import { Card, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
   BookOpen, Clock, Award, FileText, Calendar, MessageSquare,
   Settings, Bell, LogOut, ChevronRight, CheckCircle, Play,
-  User, TrendingUp, Download, ExternalLink
+  User, Download
 } from 'lucide-react'
 
 const enrolledCourses = [
@@ -48,11 +48,11 @@ export default function StudentPortal() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-gold rounded flex items-center justify-center">
-              <span className="font-display text-xl text-industrial-black">M</span>
+              <span className="font-display text-base text-industrial-black">N4</span>
             </div>
             <div>
               <span className="font-display text-white">Student Portal</span>
-              <span className="block text-xs text-white/40">Mining Machinery Solutions</span>
+              <span className="block text-xs text-white/40">Newton&apos;s 4th Training Academy</span>
             </div>
           </div>
 

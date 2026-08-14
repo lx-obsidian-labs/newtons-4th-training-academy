@@ -12,11 +12,20 @@ import { CheckCircle, ArrowRight, Loader2, Shield, Award, Users, Clock } from 'l
 const courseOptions = [
   { value: '', label: 'Select a course' },
   { value: 'excavator', label: 'Excavator Operator Training' },
+  { value: 'tlb', label: 'TLB (Tractor Loader Backhoe) Training' },
   { value: 'dump-truck', label: 'Dump Truck Operator Training' },
   { value: 'bulldozer', label: 'Bulldozer Training' },
   { value: 'loader', label: 'Front-End Loader Training' },
   { value: 'drill-rig', label: 'Drill Rig Operator Training' },
+  { value: 'adt', label: 'ADT (Articulated Dump Truck) Training' },
+  { value: 'rigid-dump-truck', label: 'Rigid Dump Truck (777) Training' },
+  { value: 'grader', label: 'Grader Operator Training' },
+  { value: 'bobcat', label: 'Bobcat (Skid Steer) Training' },
+  { value: 'lhd-scoop', label: 'LHD Scoop Training' },
   { value: 'forklift', label: 'Forklift Training' },
+  { value: 'mobile-crane', label: 'Mobile Crane Training' },
+  { value: 'tower-crane', label: 'Tower Crane Training' },
+  { value: 'overhead-crane', label: 'Overhead Crane Training' },
   { value: 'safety', label: 'Safety Officer Course' },
 ]
 
@@ -29,7 +38,7 @@ const educationOptions = [
 ]
 
 const benefits = [
-  { icon: Shield, text: 'SAQA accredited training programs' },
+  { icon: Shield, text: 'MQA accredited training programs' },
   { icon: Award, text: 'Industry-recognized certifications' },
   { icon: Users, text: 'Job placement assistance' },
   { icon: Clock, text: 'Flexible payment options' },

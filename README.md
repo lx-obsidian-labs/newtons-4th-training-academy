@@ -1,6 +1,10 @@
-# Mining Machinery Solutions (MMS)
+# Newton's 4th Training Academy
 
-South Africa's premier heavy machinery training institution.
+Practical, industry-focused mining and construction training institution located in Middelburg, Mpumalanga.
+
+**Address:** 23 Walter Sisulu Street, Middelburg 1050, Mpumalanga, South Africa
+**Phone / WhatsApp:** 071 801 0408 · **Office:** 013 170 5575
+**Email:** info@newtons4th.co.za
 
 ## Tech Stack
 
@@ -45,6 +49,17 @@ src/
 - Premium industrial design system
 - Mobile-first responsive layout
 - Framer Motion animations
+
+## Courses
+
+- Excavator Operator Training
+- TLB (Tractor Loader Backhoe) Training
+- Dump Truck Operator Training
+- Bulldozer Training
+- Front-End Loader Training
+- Drill Rig Operator Training
+- Forklift Training
+- Safety Officer Course
 
 ## Color Palette
 

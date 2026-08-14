@@ -43,17 +43,26 @@ let enrollments: Enrollment[] = []
 function generateApplicationId(): string {
   const year = new Date().getFullYear()
   const seq = String(enrollments.length + 1).padStart(4, '0')
-  return `MMS-${year}-${seq}`
+  return `N4-${year}-${seq}`
 }
 
 function calculateCourseAmount(course: string): number {
   const amounts: Record<string, number> = {
     'excavator': 12500,
+    'tlb': 11000,
     'dump-truck': 9800,
     'bulldozer': 11200,
     'loader': 10500,
     'drill-rig': 14500,
+    'adt': 12800,
+    'rigid-dump-truck': 13500,
+    'grader': 11800,
+    'bobcat': 9500,
+    'lhd-scoop': 14800,
     'forklift': 7500,
+    'mobile-crane': 15500,
+    'tower-crane': 16500,
+    'overhead-crane': 14000,
     'safety': 8500,
   }
   return amounts[course] || 0

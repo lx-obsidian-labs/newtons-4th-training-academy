@@ -8,6 +8,7 @@ import Link from 'next/link'
 const courses = [
   { 
     title: 'Excavator Operator', 
+    slug: 'excavator',
     description: 'Master the art of excavator operation with comprehensive hands-on training covering digging, loading, and material handling.', 
     duration: '4-6 weeks', 
     price: 'R12,500', 
@@ -16,7 +17,18 @@ const courses = [
     featured: true 
   },
   { 
+    title: 'TLB (Tractor Loader Backhoe)', 
+    slug: 'tlb',
+    description: 'Master TLB operation for digging, loading, and site work — one of the most in-demand machines in construction and mining.', 
+    duration: '2-3 weeks', 
+    price: 'R11,000', 
+    students: '300+', 
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
     title: 'Dump Truck Operator', 
+    slug: 'dump-truck',
     description: 'Learn heavy-duty haul truck operations, site safety, and efficient material transport for mining operations.', 
     duration: '3-4 weeks', 
     price: 'R9,800', 
@@ -26,6 +38,7 @@ const courses = [
   },
   { 
     title: 'Bulldozer Training', 
+    slug: 'bulldozer',
     description: 'Develop skills in earthmoving, grading, and site preparation using modern bulldozer equipment.', 
     duration: '4-5 weeks', 
     price: 'R11,200', 
@@ -35,6 +48,7 @@ const courses = [
   },
   { 
     title: 'Front-End Loader', 
+    slug: 'loader',
     description: 'Gain proficiency in loading operations, material handling, and efficient loader management.', 
     duration: '3-4 weeks', 
     price: 'R10,500', 
@@ -44,6 +58,7 @@ const courses = [
   },
   { 
     title: 'Drill Rig Operator', 
+    slug: 'drill-rig',
     description: 'Comprehensive drilling techniques for mining exploration and production drilling operations.', 
     duration: '5-6 weeks', 
     price: 'R14,500', 
@@ -53,11 +68,102 @@ const courses = [
   },
   { 
     title: 'Safety Officer Course', 
+    slug: 'safety',
     description: 'Occupational health and safety certification for mining and industrial environments.', 
     duration: '2-3 weeks', 
     price: 'R8,500', 
     students: '350+', 
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'ADT (Articulated Dump Truck)', 
+    slug: 'adt',
+    description: 'Operate articulated dump trucks for hauling in mining and construction with industry-recognized certification.', 
+    duration: '3-4 weeks', 
+    price: 'R12,800', 
+    students: '240+', 
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Rigid Dump Truck (777)', 
+    slug: 'rigid-dump-truck',
+    description: 'Train on rigid dump trucks (777) — the backbone of open-pit mining haulage — with simulator and practical training.', 
+    duration: '3-4 weeks', 
+    price: 'R13,500', 
+    students: '210+', 
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Grader Operator', 
+    slug: 'grader',
+    description: 'Master motor grader operation for fine grading, road building, and site leveling in construction and mining.', 
+    duration: '3-4 weeks', 
+    price: 'R11,800', 
+    students: '190+', 
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Bobcat (Skid Steer)', 
+    slug: 'bobcat',
+    description: 'Operate bobcat skid steer loaders for loading, digging, and site work with versatile attachment training.', 
+    duration: '2-3 weeks', 
+    price: 'R9,500', 
+    students: '260+', 
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'LHD Scoop', 
+    slug: 'lhd-scoop',
+    description: 'Underground mining LHD scoop operator training — mucking, hauling, and ore handling in mine workings.', 
+    duration: '4-5 weeks', 
+    price: 'R14,800', 
+    students: '150+', 
+    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Forklift Operator', 
+    slug: 'forklift',
+    description: 'Forklift operator training covering safe lifting, warehouse procedures, and load handling with certification.', 
+    duration: '2-3 weeks', 
+    price: 'R7,500', 
+    students: '400+', 
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Mobile Crane', 
+    slug: 'mobile-crane',
+    description: 'Mobile crane operator training — lift planning, rigging, load charts, and safe crane operation.', 
+    duration: '4-6 weeks', 
+    price: 'R15,500', 
+    students: '120+', 
+    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Tower Crane', 
+    slug: 'tower-crane',
+    description: 'Tower crane operator training for high-rise construction — erection, lifting, and site coordination.', 
+    duration: '4-6 weeks', 
+    price: 'R16,500', 
+    students: '100+', 
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
+    featured: false 
+  },
+  { 
+    title: 'Overhead Crane', 
+    slug: 'overhead-crane',
+    description: 'Overhead (gantry) crane operator training for industrial and factory lifting operations.', 
+    duration: '3-4 weeks', 
+    price: 'R14,000', 
+    students: '160+', 
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop',
     featured: false 
   },
 ]
@@ -146,7 +252,7 @@ export function Courses() {
                     <div>
                       <span className="font-display text-3xl text-gold">{course.price}</span>
                     </div>
-                    <Link href={`/courses/${course.title.toLowerCase().replace(' ', '-')}`} className="group/btn flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all">
+                    <Link href={`/courses/${course.slug}`} className="group/btn flex items-center gap-2 text-gold font-semibold hover:gap-4 transition-all">
                       <span>Learn More</span>
                       <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                     </Link>

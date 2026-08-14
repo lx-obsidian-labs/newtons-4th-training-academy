@@ -2,15 +2,25 @@
 
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
-import { Phone, Mail, MapPin, Clock, Linkedin, Facebook, Instagram, ArrowRight, MapPinIcon } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Linkedin, Facebook, Twitter, ArrowRight, MapPinIcon } from 'lucide-react'
 import Link from 'next/link'
 
 const quickLinks = [
   { title: 'Excavator Training', href: '/courses/excavator' },
+  { title: 'TLB Training', href: '/courses/tlb' },
   { title: 'Dump Truck Training', href: '/courses/dump-truck' },
   { title: 'Bulldozer Training', href: '/courses/bulldozer' },
   { title: 'Front-End Loader', href: '/courses/loader' },
   { title: 'Drill Rig Training', href: '/courses/drill-rig' },
+  { title: 'ADT Training', href: '/courses/adt' },
+  { title: 'Rigid Dump Truck (777)', href: '/courses/rigid-dump-truck' },
+  { title: 'Grader Training', href: '/courses/grader' },
+  { title: 'Bobcat Training', href: '/courses/bobcat' },
+  { title: 'LHD Scoop Training', href: '/courses/lhd-scoop' },
+  { title: 'Forklift Training', href: '/courses/forklift' },
+  { title: 'Mobile Crane Training', href: '/courses/mobile-crane' },
+  { title: 'Tower Crane Training', href: '/courses/tower-crane' },
+  { title: 'Overhead Crane Training', href: '/courses/overhead-crane' },
   { title: 'Safety Officer Course', href: '/courses/safety' },
 ]
 
@@ -36,22 +46,29 @@ export function Footer() {
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-14 h-14 bg-gold rounded-xl flex items-center justify-center">
-                  <span className="font-display text-3xl text-industrial-black font-bold">M</span>
+                  <span className="font-display text-2xl text-industrial-black font-bold">N4</span>
                 </div>
                 <div>
-                  <span className="font-display text-base tracking-[0.15em] text-white block">MINING MACHINERY</span>
-                  <span className="font-display text-base tracking-[0.15em] text-gold block">SOLUTIONS</span>
+                  <span className="font-display text-base tracking-[0.15em] text-white block">NEWTON&apos;S 4TH</span>
+                  <span className="font-display text-base tracking-[0.15em] text-gold block">TRAINING ACADEMY</span>
                 </div>
               </div>
               <p className="text-white/50 mb-8 leading-relaxed font-light">
-                Building the future of mining through world-class training and professional development. 
-                South Africa's premier heavy machinery training institution.
+                Practical, industry-focused training for the mining and construction sectors. 
+                From excavator and TLB operation to drill rig and safety courses, we prepare 
+                you for real jobs in the mining industry.
               </p>
               <div className="flex gap-3">
-                {[Linkedin, Facebook, Instagram].map((Icon, i) => (
+                {[
+                  { Icon: Facebook, href: 'https://www.facebook.com/p/Newtons-4th-Training-Academy-100063517542931/' },
+                  { Icon: Linkedin, href: 'https://www.linkedin.com/company/newtons-4th-training-academy/' },
+                  { Icon: Twitter, href: 'https://x.com/4thNewton' },
+                ].map(({ Icon, href }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-white/5 hover:bg-gold flex items-center justify-center rounded-xl transition-all duration-300 group"
                   >
                     <Icon size={18} className="text-white/60 group-hover:text-industrial-black transition-colors" />
@@ -97,7 +114,7 @@ export function Footer() {
                   </div>
                   <div>
                     <p className="text-white/50 font-light">
-                      Industrial Area<br />
+                      23 Walter Sisulu Street<br />
                       Middelburg, Mpumalanga<br />
                       South Africa, 1050
                     </p>
@@ -107,13 +124,13 @@ export function Footer() {
                   <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone size={18} className="text-gold" />
                   </div>
-                  <a href="tel:+27130000000" className="text-white/50 hover:text-gold transition-colors">+27 13 000 0000</a>
+                  <a href="tel:+27718010408" className="text-white/50 hover:text-gold transition-colors">071 801 0408</a>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail size={18} className="text-gold" />
                   </div>
-                  <a href="mailto:info@mmsolutions.co.za" className="text-white/50 hover:text-gold transition-colors">info@mmsolutions.co.za</a>
+                  <a href="mailto:info@newtons4th.co.za" className="text-white/50 hover:text-gold transition-colors">info@newtons4th.co.za</a>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -134,7 +151,7 @@ export function Footer() {
         <Container>
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-white/30 text-sm font-light">
-              © 2024 Mining Machinery Solutions. All rights reserved.
+              &copy; 2026 Newton&apos;s 4th Training Academy. All rights reserved.
             </p>
             <div className="flex gap-8">
               {legalLinks.map((link) => (

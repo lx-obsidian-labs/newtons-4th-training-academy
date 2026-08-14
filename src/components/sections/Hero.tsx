@@ -2,18 +2,18 @@
 
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
-import { ChevronRight, Play, Award, Users, TrendingUp, Shield, Zap, ArrowRight } from 'lucide-react'
+import { Award, Users, Shield, Zap, ArrowRight, Play } from 'lucide-react'
 
 const stats = [
-  { value: '2,500+', label: 'Students Trained', icon: Users },
-  { value: '98%', label: 'Success Rate', icon: TrendingUp },
-  { value: '15+', label: 'Years Experience', icon: Award },
-  { value: '100%', label: 'Industry Certified', icon: Shield },
+  { value: 'MQA', label: 'Accredited Training', icon: Award },
+  { value: '16+', label: 'Operator Courses', icon: Users },
+  { value: '5-Day', label: 'Practical Short Courses', icon: Zap },
+  { value: '2,451+', label: 'Facebook Community', icon: Shield },
 ]
 
 const features = [
-  { icon: Zap, title: 'Hands-On Training', description: 'Real machinery, real experience. No simulations, just practical excellence.' },
-  { icon: Award, title: 'Nationally Accredited', description: 'SAQA accredited courses recognized across the mining industry.' },
+  { icon: Zap, title: 'Hands-On Training', description: 'Real machinery and 777 simulator training for practical, job-ready experience.' },
+  { icon: Award, title: 'MQA Accredited', description: 'Accredited operator training courses recognized across the mining and construction industries.' },
   { icon: Shield, title: 'Safety First', description: 'Comprehensive safety protocols and industry-leading standards.' }
 ]
 
@@ -44,7 +44,7 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-4 px-6 py-3 bg-gold/10 border border-gold/20 rounded-full">
               <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-              <span className="font-display text-sm tracking-[0.3em] text-gold uppercase">MMS - Mining Machinery Solutions</span>
+              <span className="font-display text-sm tracking-[0.3em] text-gold uppercase">Newton&apos;s 4th Training Academy</span>
             </div>
           </motion.div>
 
@@ -53,7 +53,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-gold text-lg md:text-xl tracking-[0.4em] uppercase mb-6 font-light">South Africa's Premier</p>
+            <p className="text-gold text-lg md:text-xl tracking-[0.4em] uppercase mb-6 font-light">Your Path to Excellence</p>
           </motion.div>
 
           <motion.h1
@@ -149,7 +149,7 @@ export function Features() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-gold text-sm tracking-[0.3em] uppercase mb-4">Why Choose MMS</p>
+          <p className="text-gold text-sm tracking-[0.3em] uppercase mb-4">Why Choose Newton&apos;s 4th</p>
           <h2 className="font-display text-4xl md:text-6xl text-white mb-6">EXCELLENCE IN TRAINING</h2>
           <div className="w-32 h-1 bg-gradient-to-r from-gold via-yellow-400 to-gold mx-auto" />
         </motion.div>
