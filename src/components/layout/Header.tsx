@@ -10,8 +10,9 @@ import Link from 'next/link'
 const navLinks = [
   {
     title: 'Courses',
-    href: '#courses',
+    href: '/courses',
     children: [
+      { title: 'All Courses', href: '/courses' },
       { title: 'Excavator Training', href: '/courses/excavator' },
       { title: 'TLB Training', href: '/courses/tlb' },
       { title: 'Dump Truck Training', href: '/courses/dump-truck' },
@@ -30,10 +31,11 @@ const navLinks = [
       { title: 'Safety Officer Courses', href: '/courses/safety' },
     ]
   },
-  { title: 'About', href: '#about' },
-  { title: 'Facility', href: '#facility' },
-  { title: 'Testimonials', href: '#testimonials' },
-  { title: 'Contact', href: '#contact' },
+  { title: 'About', href: '/about' },
+  { title: 'Gallery', href: '/gallery' },
+  { title: 'Careers', href: '/careers' },
+  { title: 'FAQ', href: '/faq' },
+  { title: 'Contact', href: '/contact' },
   { title: 'Portal', href: '/portal' },
 ]
 

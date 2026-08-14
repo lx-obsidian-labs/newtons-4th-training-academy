@@ -1,34 +1,25 @@
 'use client'
 
 import { Container } from '@/components/ui/Container'
-import { Button } from '@/components/ui/Button'
-import { Phone, Mail, MapPin, Clock, Linkedin, Facebook, Twitter, ArrowRight, MapPinIcon } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Linkedin, Facebook, Twitter, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 const quickLinks = [
+  { title: 'All Courses', href: '/courses' },
   { title: 'Excavator Training', href: '/courses/excavator' },
   { title: 'TLB Training', href: '/courses/tlb' },
   { title: 'Dump Truck Training', href: '/courses/dump-truck' },
   { title: 'Bulldozer Training', href: '/courses/bulldozer' },
-  { title: 'Front-End Loader', href: '/courses/loader' },
-  { title: 'Drill Rig Training', href: '/courses/drill-rig' },
-  { title: 'ADT Training', href: '/courses/adt' },
-  { title: 'Rigid Dump Truck (777)', href: '/courses/rigid-dump-truck' },
-  { title: 'Grader Training', href: '/courses/grader' },
-  { title: 'Bobcat Training', href: '/courses/bobcat' },
-  { title: 'LHD Scoop Training', href: '/courses/lhd-scoop' },
-  { title: 'Forklift Training', href: '/courses/forklift' },
-  { title: 'Mobile Crane Training', href: '/courses/mobile-crane' },
-  { title: 'Tower Crane Training', href: '/courses/tower-crane' },
-  { title: 'Overhead Crane Training', href: '/courses/overhead-crane' },
   { title: 'Safety Officer Course', href: '/courses/safety' },
 ]
 
 const companyLinks = [
-  { title: 'About Us', href: '/#facility' },
-  { title: 'Training Facility', href: '/#facility' },
-  { title: 'Our Courses', href: '/courses' },
-  { title: 'Testimonials', href: '/#testimonials' },
+  { title: 'About Us', href: '/about' },
+  { title: 'Gallery', href: '/gallery' },
+  { title: 'Careers', href: '/careers' },
+  { title: 'Blog', href: '/blog' },
+  { title: 'FAQ', href: '/faq' },
+  { title: 'Contact', href: '/contact' },
 ]
 
 const legalLinks = [
@@ -36,6 +27,7 @@ const legalLinks = [
   { title: 'Terms of Service', href: '/terms' },
   { title: 'Cookie Policy', href: '/cookies' },
   { title: 'Student Portal', href: '/portal' },
+  { title: 'Verify Certificate', href: '/certificates' },
 ]
 
 export function Footer() {
@@ -47,7 +39,7 @@ export function Footer() {
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-14 h-14 bg-gold rounded-xl flex items-center justify-center">
-                  <span className="font-display text-2xl text-industrial-black font-bold">N4</span>
+                  <span className="font-display text-2xl text-black font-bold">N4</span>
                 </div>
                 <div>
                   <span className="font-display text-base tracking-[0.15em] text-white block">NEWTON&apos;S 4TH</span>
@@ -72,7 +64,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-white/5 hover:bg-gold flex items-center justify-center rounded-xl transition-all duration-300 group"
                   >
-                    <Icon size={18} className="text-white/60 group-hover:text-industrial-black transition-colors" />
+                    <Icon size={18} className="text-white/60 group-hover:text-black transition-colors" />
                   </a>
                 ))}
               </div>
@@ -111,7 +103,7 @@ export function Footer() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                    <MapPinIcon size={18} className="text-gold" />
+                    <MapPin size={18} className="text-gold" />
                   </div>
                   <div>
                     <p className="text-white/50 font-light">
@@ -154,11 +146,11 @@ export function Footer() {
             <p className="text-white/30 text-sm font-light">
               &copy; 2026 Newton&apos;s 4th Training Academy. All rights reserved.
             </p>
-            <div className="flex gap-8">
+            <div className="flex flex-wrap gap-6 justify-center">
               {legalLinks.map((link) => (
-                <a key={link.title} href={link.href} className="text-white/30 text-sm hover:text-gold transition-colors">
+                <Link key={link.title} href={link.href} className="text-white/30 text-sm hover:text-gold transition-colors">
                   {link.title}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
