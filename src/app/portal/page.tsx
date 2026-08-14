@@ -266,27 +266,40 @@ export default function PortalPage() {
 
           {/* Training Videos */}
           <div className="mb-8">
-            <h2 className="font-display text-xl text-white mb-4">Training Videos</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {enrolledCourses[0].videos.map((video, i) => (
-                <a
-                  key={i}
-                  href={video.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group p-5 bg-[#141414] rounded-2xl border border-white/10 hover:border-gold/30 transition-all"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/30 transition-colors">
-                      <Play size={24} className="text-red-400 ml-1" />
-                    </div>
-                    <div>
-                      <h3 className="text-white font-medium group-hover:text-gold transition-colors">{video.title}</h3>
-                      <p className="text-white/40 text-sm mt-1">YouTube • Click to watch</p>
-                    </div>
-                  </div>
-                </a>
-              ))}
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="font-display text-xl text-white">ADT Training Video Series</h2>
+              <a
+                href="https://www.youtube.com/playlist?list=PLJ93Sr2jvwvtx_BcwgtvdzjjTS0eZznYD"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold text-sm hover:text-yellow-400 transition-colors"
+              >
+                Open on YouTube →
+              </a>
+            </div>
+            
+            {/* Embedded Playlist Player */}
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 mb-6">
+              <iframe
+                src="https://www.youtube.com/embed/videoseries?list=PLJ93Sr2jvwvtx_BcwgtvdzjjTS0eZznYD"
+                title="ADT Training Video Series"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+
+            {/* Video Playlist Info */}
+            <div className="p-5 bg-[#141414] rounded-2xl border border-white/10">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Play size={24} className="text-red-400 ml-1" />
+                </div>
+                <div>
+                  <h3 className="text-white font-medium">ADT (Articulated Dump Truck) Training Series</h3>
+                  <p className="text-white/40 text-sm mt-1">Complete playlist • Watch all videos in order for best learning</p>
+                </div>
+              </div>
             </div>
           </div>
 
