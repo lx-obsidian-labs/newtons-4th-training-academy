@@ -29,6 +29,15 @@ export default function PortalLoginPage() {
     // Simulate login - in production, this would call an API
     await new Promise(resolve => setTimeout(resolve, 1500))
     
+    // Placeholder credentials check
+    const validEmail = email === 'student@newtons4th.co.za' && password === 'student123'
+    
+    if (!validEmail) {
+      setError('Invalid email or password. Try: student@newtons4th.co.za / student123')
+      setIsLoading(false)
+      return
+    }
+    
     // Store auth state
     localStorage.setItem('portal_auth', JSON.stringify({
       email,
@@ -60,6 +69,7 @@ export default function PortalLoginPage() {
               </div>
               <h1 className="font-display text-4xl text-white mb-3">STUDENT PORTAL</h1>
               <p className="text-white/50">Sign in to access your courses and materials</p>
+              <p className="text-gold/60 text-sm mt-3">Demo: student@newtons4th.co.za / student123</p>
             </div>
 
             <div className="bg-gradient-to-br from-[#141414] to-[#0f0f0f] rounded-3xl border border-white/10 p-8 md:p-10">
