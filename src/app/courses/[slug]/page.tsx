@@ -22,10 +22,10 @@ export default async function CoursePage({ params }: { params: { slug: string } 
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#111111]">
       <Header />
       
-      <section className="relative pt-32 pb-20 bg-gradient-to-b from-industrial-charcoal to-industrial-black overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-b from-[#0a0a0a] to-[#111111] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent" />
         
         <Container className="relative z-10">
@@ -65,10 +65,12 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               </div>
 
               <div className="flex gap-4">
-                <Button variant="primary" size="lg" className="group">
-                  Enroll Now
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-                </Button>
+                <Link href={`/enroll?course=${course.slug}`}>
+                  <Button variant="primary" size="lg" className="group">
+                    Enroll Now
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                  </Button>
+                </Link>
                 <Button variant="secondary" size="lg">
                   Download Syllabus
                 </Button>
@@ -81,13 +83,13 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 alt={course.title}
                 className="w-full rounded-xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-industrial-black/50 to-transparent rounded-xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/50 to-transparent rounded-xl" />
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-20 bg-industrial-charcoal">
+      <section className="py-20 bg-[#0d0d0d]">
         <Container>
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
@@ -100,7 +102,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 <h2 className="font-display text-3xl text-white mb-6">Curriculum</h2>
                 <div className="space-y-6">
                   {course.curriculum.map((section, index) => (
-                    <div key={index} className="bg-industrial-steel rounded-lg p-6 border border-white/5">
+                    <div key={index} className="bg-[#141414] rounded-xl p-6 border border-white/5">
                       <h3 className="font-display text-xl text-gold mb-4">Module {index + 1}: {section.title}</h3>
                       <ul className="space-y-3">
                         {section.lessons.map((lesson, i) => (
@@ -117,7 +119,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
             </div>
 
             <div className="space-y-8">
-              <div className="bg-industrial-steel rounded-xl p-6 border border-white/5 sticky top-32">
+              <div className="bg-[#141414] rounded-xl p-6 border border-white/5 sticky top-32">
                 <h3 className="font-display text-xl text-white mb-6">What You Get</h3>
                 
                 <div className="space-y-4 mb-8">
@@ -146,16 +148,18 @@ export default async function CoursePage({ params }: { params: { slug: string } 
 
                 <div className="text-3xl font-display text-gold mb-4">R{course.price.toLocaleString()}</div>
                 
-                <Button variant="primary" className="w-full">
-                  Enroll in This Course
-                </Button>
+                <Link href={`/enroll?course=${course.slug}`}>
+                  <Button variant="primary" className="w-full">
+                    Enroll in This Course
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-16 bg-industrial-black border-t border-white/5">
+      <section className="py-16 bg-[#111111] border-t border-white/5">
         <Container>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -187,23 +191,21 @@ export default async function CoursePage({ params }: { params: { slug: string } 
       <section className="py-20 bg-gold">
         <Container>
           <div className="text-center">
-            <h2 className="font-display text-4xl md:text-5xl text-industrial-black mb-6">
+            <h2 className="font-display text-4xl md:text-5xl text-[#111111] mb-6">
               READY TO START YOUR TRAINING?
             </h2>
-            <p className="text-xl text-industrial-black/70 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-[#111111]/70 mb-10 max-w-2xl mx-auto">
               Join hundreds of successful graduates who have built careers in the mining industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="lg" 
-                className="bg-industrial-black text-gold border-none hover:bg-industrial-charcoal"
-              >
-                Enroll Now
-                <ArrowRight size={20} />
-              </Button>
-              <Link href="/">
-                <button className="bg-transparent text-industrial-black font-semibold px-10 py-5 rounded hover:bg-industrial-black/10 transition-colors border-2 border-industrial-black/20">
+              <Link href={`/enroll?course=${course.slug}`}>
+                <button className="px-10 py-5 bg-[#111111] text-gold font-semibold rounded-xl hover:bg-[#1a1a1a] transition-colors border-2 border-[#111111]/20">
+                  Enroll Now
+                  <ArrowRight size={20} className="inline ml-2" />
+                </button>
+              </Link>
+              <Link href="/courses">
+                <button className="bg-transparent text-[#111111] font-semibold px-10 py-5 rounded-xl hover:bg-[#111111]/10 transition-colors border-2 border-[#111111]/20">
                   View All Courses
                 </button>
               </Link>

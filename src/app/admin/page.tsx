@@ -2,14 +2,14 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Container } from '@/components/ui/Container'
-import { Badge } from '@/components/ui/Badge'
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
 import { 
   Users, DollarSign, TrendingUp, BookOpen, Award, Clock, 
   BarChart3, Settings, FileText, Bell, Search,
-  ArrowUpRight, ArrowDownRight, PieChart, Activity
+  ArrowUpRight, PieChart, Activity, LogOut
 } from 'lucide-react'
+import Link from 'next/link'
 
 const stats = [
   { label: 'Total Students', value: '2,547', change: '+12%', trend: 'up', icon: Users },
@@ -49,17 +49,17 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('dashboard')
 
   return (
-    <div className="min-h-screen bg-industrial-black">
+    <div className="min-h-screen bg-[#111111]">
       <div className="flex">
-        <aside className="w-64 bg-industrial-charcoal border-r border-white/5 min-h-screen fixed">
+        <aside className="w-64 bg-[#0a0a0a] border-r border-white/5 min-h-screen fixed">
           <div className="p-6 border-b border-white/5">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gold rounded flex items-center justify-center">
-                <span className="font-display text-base text-industrial-black">N4</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-gold to-yellow-500 rounded-xl flex items-center justify-center">
+                <span className="font-display text-base text-black font-bold">N4</span>
               </div>
               <div>
-                <span className="font-display text-sm text-white block">N4</span>
-                <span className="text-xs text-white/40">Admin Portal</span>
+                <span className="font-display text-sm text-white block">N4 Admin</span>
+                <span className="text-xs text-white/40">Management Portal</span>
               </div>
             </div>
           </div>
@@ -87,11 +87,15 @@ export default function AdminDashboard() {
                 <span className="text-sm">{item.label}</span>
               </button>
             ))}
+            <Link href="/" className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-white/40 hover:text-white hover:bg-white/5 transition-colors mt-8">
+              <LogOut size={18} />
+              <span className="text-sm">Back to Site</span>
+            </Link>
           </nav>
         </aside>
 
         <main className="flex-1 ml-64">
-          <header className="bg-industrial-charcoal border-b border-white/5 px-8 py-4 sticky top-0 z-40">
+          <header className="bg-[#0a0a0a] border-b border-white/5 px-8 py-4 sticky top-0 z-40">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="font-display text-2xl text-white">Dashboard</h1>
@@ -103,7 +107,7 @@ export default function AdminDashboard() {
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="bg-industrial-steel border border-white/10 rounded-lg pl-10 pr-4 py-2 text-white text-sm placeholder:text-white/40 focus:outline-none focus:border-gold w-64"
+                    className="bg-[#141414] border border-white/10 rounded-lg pl-10 pr-4 py-2 text-white text-sm placeholder:text-white/40 focus:outline-none focus:border-gold w-64"
                   />
                 </div>
                 <button className="relative p-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors">
@@ -123,7 +127,7 @@ export default function AdminDashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="relative overflow-hidden">
+                  <Card className="relative overflow-hidden bg-[#141414]">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                         <stat.icon size={20} className="text-gold" />
@@ -146,7 +150,7 @@ export default function AdminDashboard() {
 
             <div className="grid lg:grid-cols-3 gap-8 mb-8">
               <div className="lg:col-span-2">
-                <Card>
+                <Card className="bg-[#141414]">
                   <CardHeader>
                     <CardTitle>Revenue Overview</CardTitle>
                     <CardDescription>Monthly revenue for the past 6 months</CardDescription>
@@ -174,7 +178,7 @@ export default function AdminDashboard() {
               </div>
 
               <div>
-                <Card className="h-full">
+                <Card className="h-full bg-[#141414]">
                   <CardHeader>
                     <CardTitle>Course Distribution</CardTitle>
                     <CardDescription>Enrollment by course type</CardDescription>
@@ -186,7 +190,7 @@ export default function AdminDashboard() {
                           <span className="text-white/70">{course.name}</span>
                           <span className="text-gold">{course.enrollments}</span>
                         </div>
-                        <div className="h-2 bg-industrial-steel rounded-full overflow-hidden">
+                        <div className="h-2 bg-[#0a0a0a] rounded-full overflow-hidden">
                           <motion.div
                             initial={{ width: 0 }}
                             animate={{ width: `${(course.enrollments / 520) * 100}%` }}
@@ -201,7 +205,7 @@ export default function AdminDashboard() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              <Card>
+              <Card className="bg-[#141414]">
                 <CardHeader>
                   <CardTitle>Recent Enrollments</CardTitle>
                   <CardDescription>Latest student applications</CardDescription>
@@ -232,28 +236,28 @@ export default function AdminDashboard() {
                 </div>
               </Card>
 
-              <Card>
+              <Card className="bg-[#141414]">
                 <CardHeader>
                   <CardTitle>Quick Stats</CardTitle>
                   <CardDescription>Key performance indicators</CardDescription>
                 </CardHeader>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-industrial-steel rounded-lg p-4">
+                  <div className="bg-[#0a0a0a] rounded-lg p-4">
                     <Activity className="w-8 h-8 text-gold mb-2" />
                     <div className="font-display text-2xl text-white">94%</div>
                     <div className="text-sm text-white/40">Completion Rate</div>
                   </div>
-                  <div className="bg-industrial-steel rounded-lg p-4">
+                  <div className="bg-[#0a0a0a] rounded-lg p-4">
                     <Clock className="w-8 h-8 text-gold mb-2" />
                     <div className="font-display text-2xl text-white">4.2 wks</div>
                     <div className="text-sm text-white/40">Avg Duration</div>
                   </div>
-                  <div className="bg-industrial-steel rounded-lg p-4">
+                  <div className="bg-[#0a0a0a] rounded-lg p-4">
                     <PieChart className="w-8 h-8 text-gold mb-2" />
                     <div className="font-display text-2xl text-white">78%</div>
                     <div className="text-sm text-white/40">Job Placement</div>
                   </div>
-                  <div className="bg-industrial-steel rounded-lg p-4">
+                  <div className="bg-[#0a0a0a] rounded-lg p-4">
                     <TrendingUp className="w-8 h-8 text-gold mb-2" />
                     <div className="font-display text-2xl text-white">98%</div>
                     <div className="text-sm text-white/40">Success Rate</div>

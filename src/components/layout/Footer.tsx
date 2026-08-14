@@ -25,10 +25,10 @@ const quickLinks = [
 ]
 
 const companyLinks = [
-  { title: 'About Us', href: '#about' },
-  { title: 'Training Facility', href: '#facility' },
-  { title: 'Our Team', href: '#team' },
-  { title: 'Testimonials', href: '#testimonials' },
+  { title: 'About Us', href: '/#facility' },
+  { title: 'Training Facility', href: '/#facility' },
+  { title: 'Our Courses', href: '/courses' },
+  { title: 'Testimonials', href: '/#testimonials' },
 ]
 
 const legalLinks = [
@@ -97,10 +97,10 @@ export function Footer() {
               <ul className="space-y-4">
                 {companyLinks.map((link) => (
                   <li key={link.title}>
-                    <a href={link.href} className="text-white/50 hover:text-gold transition-colors inline-flex items-center gap-2 group">
+                    <Link href={link.href} className="text-white/50 hover:text-gold transition-colors inline-flex items-center gap-2 group">
                       <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -ml-4 group-hover:ml-0 transition-all" />
                       {link.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

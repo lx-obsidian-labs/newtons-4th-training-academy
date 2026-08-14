@@ -121,9 +121,11 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button variant="primary" size="sm" className="hidden md:inline-flex shadow-lg shadow-gold/20">
-              Enroll Now
-            </Button>
+            <Link href="/enroll">
+              <Button variant="primary" size="sm" className="hidden md:inline-flex shadow-lg shadow-gold/20">
+                Enroll Now
+              </Button>
+            </Link>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-3 bg-white/5 hover:bg-gold/20 rounded-xl transition-colors"
@@ -169,9 +171,11 @@ export function Header() {
                     )}
                   </div>
                 ))}
-                <Button variant="primary" className="mt-6 w-full py-5">
-                  Enroll Now
-                </Button>
+                <Link href="/enroll" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="primary" className="mt-6 w-full py-5">
+                    Enroll Now
+                  </Button>
+                </Link>
               </div>
             </Container>
           </motion.div>

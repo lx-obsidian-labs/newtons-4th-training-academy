@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
@@ -10,11 +9,13 @@ import {
   Settings, Bell, LogOut, ChevronRight, CheckCircle, Play,
   User, Download
 } from 'lucide-react'
+import Link from 'next/link'
 
 const enrolledCourses = [
   {
     id: 1,
     title: 'Excavator Operator Training',
+    slug: 'excavator',
     progress: 72,
     currentModule: 'Module 3: Operational Techniques',
     nextLesson: 'Loading and Material Handling',
@@ -43,18 +44,18 @@ export default function StudentPortal() {
   const [activeTab, setActiveTab] = useState('dashboard')
 
   return (
-    <div className="min-h-screen bg-industrial-black">
-      <header className="bg-industrial-charcoal border-b border-white/5">
+    <div className="min-h-screen bg-[#111111]">
+      <header className="bg-[#0a0a0a] border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-gold rounded flex items-center justify-center">
-              <span className="font-display text-base text-industrial-black">N4</span>
+          <Link href="/" className="flex items-center gap-4">
+            <div className="w-10 h-10 bg-gradient-to-br from-gold to-yellow-500 rounded-xl flex items-center justify-center">
+              <span className="font-display text-base text-black font-bold">N4</span>
             </div>
             <div>
               <span className="font-display text-white">Student Portal</span>
               <span className="block text-xs text-white/40">Newton&apos;s 4th Training Academy</span>
             </div>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-4">
             <button className="relative p-2 hover:bg-white/5 rounded-lg transition-colors">
@@ -75,7 +76,7 @@ export default function StudentPortal() {
       </header>
 
       <div className="flex">
-        <aside className="w-64 bg-industrial-charcoal border-r border-white/5 min-h-[calc(100vh-73px)] p-4">
+        <aside className="w-64 bg-[#0a0a0a] border-r border-white/5 min-h-[calc(100vh-73px)] p-4 hidden lg:block">
           <nav className="space-y-1">
             {[
               { icon: BookOpen, label: 'Dashboard', id: 'dashboard' },
@@ -116,7 +117,7 @@ export default function StudentPortal() {
               <div>
                 <h2 className="font-display text-xl text-white mb-4">Continue Learning</h2>
                 {enrolledCourses.map((course) => (
-                  <Card key={course.id} className="bg-gradient-to-br from-industrial-charcoal to-industrial-steel">
+                  <Card key={course.id} className="bg-gradient-to-br from-[#141414] to-[#0a0a0a]">
                     <div className="flex items-start gap-6 mb-6">
                       <div className="w-16 h-16 bg-gold/20 rounded-xl flex items-center justify-center flex-shrink-0">
                         <span className="text-3xl">🚜</span>
@@ -136,29 +137,33 @@ export default function StudentPortal() {
                         <span className="text-white/60">Progress</span>
                         <span className="text-gold">{course.progress}%</span>
                       </div>
-                      <div className="h-3 bg-industrial-black rounded-full overflow-hidden">
+                      <div className="h-3 bg-[#0a0a0a] rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${course.progress}%` }}
-                          className="h-full bg-gradient-to-r from-gold to-gold-400 rounded-full"
+                          className="h-full bg-gradient-to-r from-gold to-yellow-500 rounded-full"
                         />
                       </div>
                     </div>
 
-                    <div className="p-4 bg-industrial-black rounded-lg mb-4">
+                    <div className="p-4 bg-[#0a0a0a] rounded-lg mb-4">
                       <p className="text-xs text-white/40 mb-1">Current Module</p>
                       <p className="text-white font-medium mb-2">{course.currentModule}</p>
                       <p className="text-sm text-gold">Next: {course.nextLesson}</p>
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <button className="flex-1 bg-gold text-industrial-black font-semibold py-3 rounded-lg hover:bg-gold-400 transition-colors flex items-center justify-center gap-2">
-                        <Play size={18} />
-                        Continue Course
-                      </button>
-                      <button className="px-4 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-                        <ChevronRight size={18} className="text-white/60" />
-                      </button>
+                      <Link href={`/courses/${course.slug}`} className="flex-1">
+                        <button className="w-full bg-gradient-to-r from-gold to-yellow-500 text-black font-semibold py-3 rounded-lg hover:shadow-lg hover:shadow-gold/20 transition-all flex items-center justify-center gap-2">
+                          <Play size={18} />
+                          Continue Course
+                        </button>
+                      </Link>
+                      <Link href={`/courses/${course.slug}`}>
+                        <button className="px-4 py-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                          <ChevronRight size={18} className="text-white/60" />
+                        </button>
+                      </Link>
                     </div>
                   </Card>
                 ))}
@@ -191,21 +196,21 @@ export default function StudentPortal() {
                   <CardTitle>Your Stats</CardTitle>
                 </CardHeader>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-industrial-steel rounded-lg">
+                  <div className="flex items-center justify-between p-4 bg-[#0a0a0a] rounded-lg">
                     <div className="flex items-center gap-3">
                       <Clock size={18} className="text-gold" />
                       <span className="text-white/70 text-sm">Study Time</span>
                     </div>
                     <span className="font-display text-xl text-white">24h</span>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-industrial-steel rounded-lg">
+                  <div className="flex items-center justify-between p-4 bg-[#0a0a0a] rounded-lg">
                     <div className="flex items-center gap-3">
                       <CheckCircle size={18} className="text-gold" />
                       <span className="text-white/70 text-sm">Lessons Done</span>
                     </div>
                     <span className="font-display text-xl text-white">8/12</span>
                   </div>
-                  <div className="flex items-center justify-between p-4 bg-industrial-steel rounded-lg">
+                  <div className="flex items-center justify-between p-4 bg-[#0a0a0a] rounded-lg">
                     <div className="flex items-center gap-3">
                       <Award size={18} className="text-gold" />
                       <span className="text-white/70 text-sm">Cert Progress</span>
@@ -224,7 +229,7 @@ export default function StudentPortal() {
                     <div
                       key={notification.id}
                       className={`p-4 rounded-lg transition-colors cursor-pointer ${
-                        notification.unread ? 'bg-gold/10 border border-gold/20' : 'bg-industrial-steel hover:bg-white/5'
+                        notification.unread ? 'bg-gold/10 border border-gold/20' : 'bg-[#0a0a0a] hover:bg-white/5'
                       }`}
                     >
                       <div className="flex items-start gap-3">
@@ -248,9 +253,9 @@ export default function StudentPortal() {
                   <p className="text-white/50 text-sm mb-4">
                     Contact your instructor or support team
                   </p>
-                  <button className="w-full bg-gold text-industrial-black font-semibold py-3 rounded-lg hover:bg-gold-400 transition-colors">
+                  <a href="tel:+27718010408" className="block w-full bg-gradient-to-r from-gold to-yellow-500 text-black font-semibold py-3 rounded-lg hover:shadow-lg hover:shadow-gold/20 transition-all">
                     Contact Support
-                  </button>
+                  </a>
                 </div>
               </Card>
             </div>
