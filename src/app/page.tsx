@@ -4,6 +4,9 @@ import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 import { Badge } from '@/components/ui/Badge'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { BackToTop } from '@/components/ui/BackToTop'
+import { CookieConsent } from '@/components/ui/CookieConsent'
 import { Target, Users, Building, Award, ArrowRight, Phone, Shield, Award as AwardIcon, Users as UsersIcon, Clock } from 'lucide-react'
 import Link from 'next/link'
 
@@ -198,6 +201,9 @@ export default function HomePage() {
       </section>
 
       <FooterComponent />
+      <WhatsAppButton />
+      <BackToTop />
+      <CookieConsent />
     </main>
   )
 }
