@@ -1,5 +1,7 @@
 # Newton's 4th Training Academy
 
+**Engineering verification:** [Documentation verification](DOCUMENTATION_VERIFICATION.md). This guide separates documented functionality from independently verified test and deployment evidence.
+
 Practical, industry-focused mining and construction training institution located in Middelburg, Mpumalanga.
 
 **Address:** 23 Walter Sisulu Street, Middelburg 1050, Mpumalanga, South Africa
