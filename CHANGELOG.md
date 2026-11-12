@@ -1,5 +1,7 @@
 # Changelog
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## Unreleased
 - Professional engineering documentation, security policy and contribution guide.
 - Catalogue integrity checks and GitHub Actions build workflow.
