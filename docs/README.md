@@ -9,3 +9,13 @@
 | Product owner | [Roadmap](ROADMAP.md), [User guide](USER-GUIDE.md), [Changelog](../CHANGELOG.md) |
 
 Documentation describes committed source, not verified production state. Update affected documents in the same pull request as behavioural changes.
+
+## Additional engineering references
+
+- [Developer handbook](DEVELOPER-GUIDE.md)
+- [Release acceptance checklist](RELEASE-CHECKLIST.md)
+- [Content governance](CONTENT-GOVERNANCE.md)
+- [ADR 0002: Device-local preferences](adr/0002-local-preferences.md)
+- [Threat model](THREAT-MODEL.md)
+
+Run `npm run check:docs` to validate local documentation links and headings. This does not verify external links or factual accuracy.
