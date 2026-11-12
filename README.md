@@ -1,2 +1,3 @@
-# Newton’s 4th Training Academy
-React/Vite static presentation site. Run npm install and npm run build; deploy dist to Cloudflare Pages. Contact details and programme availability require client confirmation. Stock imagery is illustrative. No student portal or stored application data; enquiries open WhatsApp.
+# Newton's 4th Training Academy
+
+Fresh public-facing website. React + Vite. Run npm install and npm run build. Cloudflare Pages output: dist. Admissions enquiries use WhatsApp; no server-side storage. Contact details and course availability require academy confirmation. Photos are illustrative, not academy facilities. No accreditation or job-placement claims are made.
