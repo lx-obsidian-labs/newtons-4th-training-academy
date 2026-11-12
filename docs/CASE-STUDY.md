@@ -1,5 +1,7 @@
 # Portfolio case study — Newton’s 4th Training Academy
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## Problem
 Prospective vocational learners need to identify equipment, compare training topics and prepare for admissions even when technical terminology is unfamiliar.
 
