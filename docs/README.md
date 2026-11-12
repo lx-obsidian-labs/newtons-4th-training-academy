@@ -21,3 +21,7 @@ Documentation describes committed source, not verified production state. Update 
 - [Threat model](THREAT-MODEL.md)
 
 Run `npm run check:docs` to validate local documentation links and headings. This does not verify external links or factual accuracy.
+
+## Continuity
+
+Start with the [successor handover and recovery manual](HANDOVER.md) if the original developer is unavailable.
