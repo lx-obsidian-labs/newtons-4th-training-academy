@@ -1,3 +1,4 @@
+/* Engineering: LX Obsidian Labs | https://lxobsidian.co.za | Newton's 4th Training Academy. Preserve existing third-party notices. */
 import {readdirSync,readFileSync,existsSync,statSync} from 'node:fs';
 import {dirname,resolve,relative} from 'node:path';
 import assert from 'node:assert/strict';
