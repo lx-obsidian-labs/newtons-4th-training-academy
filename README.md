@@ -50,3 +50,21 @@ Illustrations are identification aids, not operating instructions. Study resourc
 ## Maintenance
 
 Read [contribution guidance](CONTRIBUTING.md) before modifying programme data or learning materials. See [security reporting](SECURITY.md). No open-source licence is granted by this README; obtain permission from the relevant rights holders before redistribution.
+
+## Complete documentation
+
+See the [engineering documentation index](docs/README.md), [portfolio case study](docs/CASE-STUDY.md), [roadmap](docs/ROADMAP.md), [learner guide](docs/USER-GUIDE.md), [threat model](docs/THREAT-MODEL.md) and [changelog](CHANGELOG.md).
+
+## System overview
+
+```mermaid
+flowchart LR
+  U[Learner browser] --> P[Cloudflare Pages]
+  P --> R[React application]
+  R --> C[Programme catalogue and visuals]
+  R --> D[Public learning documents]
+  R --> L[Device-local preferences]
+  R --> W[External WhatsApp enquiry]
+```
+
+The diagram represents the current static architecture, not a deployed LMS backend.
