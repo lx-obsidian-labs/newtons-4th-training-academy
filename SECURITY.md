@@ -1,5 +1,7 @@
 # Security policy
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 Report suspected vulnerabilities privately using the repository's private vulnerability reporting feature if enabled, or the contact channel at https://lxobsidian.co.za. Do not publish exploit details or personal information in public issues.
 
 Include affected route, reproduction steps, impact and suggested mitigation. Use synthetic test data only.
