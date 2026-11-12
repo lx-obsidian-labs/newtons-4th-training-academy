@@ -20,11 +20,11 @@ const ContactSection = dynamic(() => import('@/components/sections/Facility').th
 const HeaderComponent = dynamic(() => import('@/components/layout/Header').then(m => m.Header), { ssr: false })
 const FooterComponent = dynamic(() => import('@/components/layout/Footer').then(m => m.Footer), { ssr: false })
 
-const employers = ['Anglo American', 'BHP Billiton', 'Sibanye-Stillwater', 'Implats', 'Glencore', 'De Beers', 'Rio Tinto', 'South32']
+const employers = ['Mining', 'Construction', 'Engineering', 'Logistics', 'Manufacturing']
 
 const processSteps = [
   { number: '01', title: 'Apply Online', description: 'Complete our simple online application form to get started.', icon: Target },
-  { number: '02', title: 'Consultation', description: 'Our admissions team will contact you within 24 hours.', icon: Users },
+  { number: '02', title: 'Consultation', description: 'Our admissions team can help you confirm course availability and requirements.', icon: Users },
   { number: '03', title: 'Enrollment', description: 'Secure your spot and arrange payment options.', icon: Building },
   { number: '04', title: 'Training', description: 'Begin your hands-on training journey with expert instructors.', icon: Award },
 ]
@@ -41,7 +41,7 @@ export default function HomePage() {
         <Container className="relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
-              <Badge variant="gold" className="mb-4">Limited Spots Available</Badge>
+              <Badge variant="gold" className="mb-4">Training enquiries open</Badge>
               <h3 className="font-display text-3xl md:text-4xl text-white mb-2">READY TO START YOUR MINING CAREER?</h3>
               <p className="text-white/60">Enroll today and transform your future in the mining industry.</p>
             </div>
@@ -52,10 +52,10 @@ export default function HomePage() {
                   <ArrowRight className="ml-2" size={20} />
                 </button>
               </Link>
-              <button className="px-10 py-6 border-2 border-gold text-gold rounded-xl hover:bg-gold hover:text-black transition-all text-lg flex items-center gap-2">
+              <a href="tel:+27718010408" className="px-10 py-6 border-2 border-gold text-gold rounded-xl hover:bg-gold hover:text-black transition-all text-lg flex items-center gap-2">
                 <Phone size={18} />
                 Call Us Now
-              </button>
+              </a>
             </div>
           </div>
         </Container>
