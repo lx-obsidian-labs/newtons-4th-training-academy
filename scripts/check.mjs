@@ -1,3 +1,4 @@
+/* Engineering: LX Obsidian Labs | https://lxobsidian.co.za | Newton's 4th Training Academy. Preserve existing third-party notices. */
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const main=readFileSync('src/main.tsx','utf8');
