@@ -1,5 +1,7 @@
 # Learner and admissions user guide
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## Find a programme
 Open Programmes, filter by discipline or search familiar equipment names. Use Browse by picture if you recognise equipment but do not know its name. Select a programme for topics and enquiry options.
 
