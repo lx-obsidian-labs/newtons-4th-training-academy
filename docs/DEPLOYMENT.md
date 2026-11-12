@@ -1,5 +1,7 @@
 # Deployment runbook
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 1. Use Node.js 22. Install dependencies with npm ci when a lockfile is present; otherwise npm install.
 2. Run npm run check and npm run build.
 3. Configure Cloudflare Pages build command npm run build and output dist.
