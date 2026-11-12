@@ -1,5 +1,7 @@
 # Developer handbook
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## First contribution
 Clone the repository, use Node 22, install dependencies (npm ci if a lockfile exists), run npm run check and npm run build, then npm run dev. Open the URL printed by Vite. Do not use production student data.
 
