@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: "Newton's 4th Training Academy | Mining & Construction Training",
     template: "%s | Newton's 4th Training Academy"
   },
-  description: "South Africa's premier mining and construction training institution. MQA-accredited courses in excavator, TLB, dump truck, bulldozer, and heavy equipment operation. Located in Middelburg, Mpumalanga.",
+  description: "Practical mining and construction training in Mpumalanga. Courses in excavator, TLB, dump truck, bulldozer, and heavy equipment operation. Located in Middelburg, Mpumalanga.",
   keywords: [
     'mining training South Africa',
     'construction courses Mpumalanga',
@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     'dump truck training',
     'heavy machinery courses',
     'mining operator certification',
-    'MQA accredited training',
     'Middelburg training academy',
     'heavy equipment operator course',
     'bulldozer training',
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://newtons4th.co.za',
     siteName: "Newton's 4th Training Academy",
     title: "Newton's 4th Training Academy | Mining & Construction Training",
-    description: "South Africa's premier mining and construction training institution. MQA-accredited courses in excavator, TLB, dump truck, and heavy equipment operation.",
+    description: "Practical mining and construction training in Mpumalanga. Courses in excavator, TLB, dump truck, and heavy equipment operation.",
     images: [
       {
         url: '/og-image.jpg',
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Newton's 4th Training Academy | Mining & Construction Training",
-    description: "South Africa's premier mining and construction training institution. MQA-accredited courses.",
+    description: "Practical mining and construction training in Mpumalanga. Courses.",
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -65,9 +64,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
 }
 
 export default function RootLayout({
@@ -79,7 +75,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Newton's 4th Training Academy",
-    "description": "South Africa's premier mining and construction training institution offering MQA-accredited courses.",
+    "description": "Vocational and occupational training in Middelburg, Mpumalanga.",
     "url": "https://newtons4th.co.za",
     "logo": "https://newtons4th.co.za/logo.png",
     "address": {
@@ -90,27 +86,8 @@ export default function RootLayout({
       "postalCode": "1050",
       "addressCountry": "ZA"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -25.77,
-      "longitude": 29.45
-    },
     "telephone": "+27718010408",
     "email": "info@newtons4th.co.za",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:00",
-        "closes": "17:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "12:00"
-      }
-    ],
     "sameAs": [
       "https://www.facebook.com/p/Newtons-4th-Training-Academy-100063517542931/",
       "https://www.linkedin.com/company/newtons-4th-training-academy/",
@@ -127,11 +104,6 @@ export default function RootLayout({
           "provider": {
             "@type": "Organization",
             "name": "Newton's 4th Training Academy"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "12500",
-            "priceCurrency": "ZAR"
           }
         },
         {
@@ -141,11 +113,6 @@ export default function RootLayout({
           "provider": {
             "@type": "Organization",
             "name": "Newton's 4th Training Academy"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "11000",
-            "priceCurrency": "ZAR"
           }
         },
         {
@@ -155,11 +122,6 @@ export default function RootLayout({
           "provider": {
             "@type": "Organization",
             "name": "Newton's 4th Training Academy"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "9800",
-            "priceCurrency": "ZAR"
           }
         }
       ]
