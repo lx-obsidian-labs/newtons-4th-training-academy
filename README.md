@@ -1,5 +1,7 @@
 # Newton's 4th Training Academy
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 A responsive training discovery and introductory learning platform for a South African vocational training institution, developed by [LX Obsidian Labs](https://lxobsidian.co.za).
 
 [Live website](https://newtons4th-academy.pages.dev/) · [Architecture](docs/ARCHITECTURE.md) · [Quality assurance](docs/QUALITY.md) · [Security](SECURITY.md)
