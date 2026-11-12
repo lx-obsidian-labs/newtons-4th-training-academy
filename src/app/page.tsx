@@ -13,7 +13,7 @@ import Link from 'next/link'
 const HeroSection = dynamic(() => import('@/components/sections/Hero').then(m => m.Hero), { ssr: false })
 const FeaturesSection = dynamic(() => import('@/components/sections/Hero').then(m => m.Features), { ssr: false })
 const CoursesSection = dynamic(() => import('@/components/sections/Courses').then(m => m.Courses), { ssr: false })
-const TestimonialsSection = dynamic(() => import('@/components/sections/Testimonials').then(m => m.Testimonials), { ssr: false })
+
 const FacilitySection = dynamic(() => import('@/components/sections/Facility').then(m => m.Facility), { ssr: false })
 const EnrollmentFormSection = dynamic(() => import('@/components/sections/EnrollmentForm').then(m => m.EnrollmentForm), { ssr: false })
 const ContactSection = dynamic(() => import('@/components/sections/Facility').then(m => m.Contact), { ssr: false })
@@ -128,8 +128,8 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <p className="text-white/30 text-sm uppercase tracking-[0.3em] mb-4">Trusted By Industry Leaders</p>
-            <p className="text-white/40 text-sm uppercase tracking-wider">Our graduates are employed by</p>
+            <p className="text-white/30 text-sm uppercase tracking-[0.3em] mb-4">Industry-focused training</p>
+            <p className="text-white/40 text-sm uppercase tracking-wider">Explore relevant career sectors</p>
           </motion.div>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             {employers.map((company) => (
@@ -145,7 +145,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <TestimonialsSection />
+      
       <FacilitySection />
       <EnrollmentFormSection />
       <ContactSection />
@@ -175,7 +175,7 @@ export default function HomePage() {
             <div className="w-32 h-1 bg-gradient-to-r from-gold via-yellow-400 to-gold mx-auto mb-10" />
             
             <p className="text-xl text-white/50 mb-12 leading-relaxed font-light max-w-2xl mx-auto">
-              Join our graduates who have launched their careers in the mining and 
+              Develop practical skills for careers in the mining and 
               construction industries with Newton&apos;s 4th Training Academy.
             </p>
             
@@ -185,15 +185,15 @@ export default function HomePage() {
                   Enroll Now
                 </button>
               </Link>
-              <button className="px-12 py-5 border-2 border-white/20 text-white rounded-xl hover:border-gold hover:text-gold transition-all">
+              <a href="https://wa.me/27718010408?text=Hello%2C%20I%20would%20like%20to%20arrange%20a%20campus%20visit." className="px-12 py-5 border-2 border-white/20 text-white rounded-xl hover:border-gold hover:text-gold transition-all">
                 Schedule Campus Tour
-              </button>
+              </a>
             </div>
 
             <div className="mt-16 flex items-center justify-center gap-8 text-white/30 text-sm flex-wrap">
-              <span className="flex items-center gap-2"><Shield size={16} className="text-gold" /> MQA Accredited</span>
+              <span className="flex items-center gap-2"><Shield size={16} className="text-gold" /> Ask about certification</span>
               <span className="flex items-center gap-2"><AwardIcon size={16} className="text-gold" /> Mining & Construction Courses</span>
-              <span className="flex items-center gap-2"><Clock size={16} className="text-gold" /> Middelburg & Witbank</span>
+              <span className="flex items-center gap-2"><Clock size={16} className="text-gold" /> Middelburg, Mpumalanga</span>
               <span className="flex items-center gap-2"><UsersIcon size={16} className="text-gold" /> Practical Job-Ready Training</span>
             </div>
           </motion.div>
