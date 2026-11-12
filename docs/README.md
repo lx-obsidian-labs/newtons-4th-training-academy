@@ -1,5 +1,7 @@
 # Engineering documentation index
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 | Audience | Start here |
 |---|---|
 | Developer | [Architecture](ARCHITECTURE.md), [Data model](DATA-MODEL.md), [Contribution guide](../CONTRIBUTING.md) |
