@@ -1,5 +1,7 @@
 # Product and engineering roadmap
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## Gate 1 — Stabilise current release
 Verify CI, direct route navigation, responsive layouts, keyboard and screen-reader use, handbook printing and external enquiry handoff. Obtain academy content approval.
 
