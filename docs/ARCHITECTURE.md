@@ -1,5 +1,7 @@
 # Architecture and engineering decisions
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## Current system
 
 Browser → Cloudflare Pages static assets → React application → public document resources or external WhatsApp enquiry.
