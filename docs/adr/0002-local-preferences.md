@@ -1,5 +1,7 @@
 # ADR 0002 — Device-local learner preferences
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 Status: Accepted for current release
 
 ## Decision
