@@ -1,5 +1,7 @@
 # Operations and incident response
 
+> Engineering documentation maintained by [LX Obsidian Labs](https://lxobsidian.co.za). Project: Newton’s 4th Training Academy. Institutional content remains subject to academy approval and applicable rights.
+
 ## Ownership
 Academy: programme facts, fees, accreditation, educational approval and admissions. Developer: application code, deployment and technical remediation. Assign named operational owners before launch.
 
